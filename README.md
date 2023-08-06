@@ -8,4 +8,8 @@ Grids are never down, because we are serverless on several platforms.
 Sending emails can go wrong or you will reach limits. 
 Grids will manage limits and errors during sending emails.
 
-Services we are/will be supporting
+Services we are/will be supporting: 
+| Service | Supported | 
+|---------|-----------|
+| Resend  | [ ]       |
+| Postmark| [ ]       |
