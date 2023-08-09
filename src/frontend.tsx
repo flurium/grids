@@ -79,8 +79,10 @@ export const Message = (props: { success?: boolean; children: string }) => {
 
 export const Landing = () => (
   <Layout
-    title="Grids | Services never go down"
-    description="Developing off grid isn't real, so you must be on as MANY grids as possible. Grid will provide fast and cost effective way to do so."
+    title="Grids: Make services never go down."
+    description="Developing off grid isn't real, so you must be on as MANY grids as possible.
+      Grids will provide a fast and cost-effective way to utilize numerous services
+      without becoming overly dependent on any one of them."
   >
     {/* <nav>
       <ul>
@@ -134,31 +136,34 @@ export const Landing = () => (
         <details>
           <summary>Cost effective</summary>
           <p>
-            Because you use several services, you can get more free plan resources. It's
-            great for startups. Every business should be started for free.
+            Using multiple services provides extra free plan resources, making it
+            particularly beneficial for startups. Starting a business without initial
+            costs is a favorable approach that every entrepreneur should consider.
           </p>
         </details>
         <details>
           <summary>Never go down</summary>
           <p>
-            Grids is a serverless thing. Each request is independent of others. If someone
-            tryes to attack us, you will not notice, because you are separetad. And even
-            if cloud platform will go down, we have backup deployments on other platforms.
+            Grids operate as a serverless solution. Each request functions independently
+            from others. In the event of an attempted attack, it would go unnoticed due to
+            the isolation. Moreover, even if a cloud platform experiences downtime, we
+            have backup deployments on alternative platforms.
           </p>
         </details>
         <details>
           <summary>All over the globe</summary>
           <p>
-            As I said before we are serverless. So our API is disrubited around whole
-            world. You will make request to the closes one automatically. It will give you
-            the fastest responses.
+            Like I mentioned earlier, we're using a serverless setup, which means our API
+            is spread out all over the world. Whenever you make a request, it'll
+            automatically go to the closest server, giving you the quickest responses.
           </p>
         </details>
         <details>
           <summary>Speed</summary>
           <p>
-            The technologies we choose are fast to run and fast to develop with. You get
-            speed during calling API. We get speed to fix bugs and add new functionality.
+            We go for technologies that are fast to use and easy to develop with. This
+            means you experience speed when you call our API, and we're able to quickly
+            address any bugs or add new features.
           </p>
         </details>
       </section>
