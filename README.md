@@ -1,4 +1,4 @@
-![Grids banner](./assets/banner.svg)
+![Grids banner](./assets/github-banner.svg)
 
 # Flurium Grids
 
