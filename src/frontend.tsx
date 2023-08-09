@@ -63,17 +63,13 @@ const Layout = (props: {
 
 export const Message = (props: { success?: boolean; children: string }) => {
   return (
-    <div
-      class={`py-3 px-4 mb-4 rounded border max-w-2xl m-auto
-       ${
-         props.success == undefined || props.success == false
-           ? "border-red-500 bg-red-100 text-red-700"
-           : "border-green-500 bg-green-100 text-green-700"
-       }
-       `}
-    >
-      {props.children}
-    </div>
+    <p>
+      {props.success == undefined || props.success == false ? (
+        <mark>{props.children}</mark>
+      ) : (
+        <ins> {props.children}</ins>
+      )}
+    </p>
   )
 }
 
