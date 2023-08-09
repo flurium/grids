@@ -8,7 +8,7 @@ because it's way to not be down.
 
 ### Deploy
 
-- [Cloudflare Workers](https://workers.cloudflare.com)
+- [Cloudflare Workers](https://workers.cloudflare.com) <- primary
 - [Vercel](https://vercel.com)
 - [Deno Deploy](https://deno.com/deploy)
 - [Fly](https://fly.io)
