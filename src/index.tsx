@@ -1,4 +1,5 @@
 import { Hono } from "hono"
+import { serveStatic } from "hono/cloudflare-workers"
 import * as v from "valibot"
 import { Landing, Message } from "./frontend"
 import { Email, brevo, resend } from "./emails"
@@ -11,6 +12,14 @@ type EnvVars = {
 const app = new Hono<{ Bindings: EnvVars }>()
 
 app.get("/", (c) => c.html(<Landing />))
+
+app.get(
+  "/public/*",
+  serveStatic({
+    root: "./",
+    rewriteRequestPath: (path) => path.replace("/public", "/"),
+  })
+)
 
 const waitlistSchema = v.object({
   name: v.optional(v.string("Name is missing.")),

@@ -16,11 +16,7 @@ const Layout = (props: {
       <title>${props.title}</title>
       <meta name="description" content="${props.description}" />
       <meta name="author" content="Roman Koshchei" />
-      <script src="https://unpkg.com/htmx.org@1.9.4/dist/htmx.min.js"></script>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
-      />
+      <link rel="stylesheet" href="/public/pico.min.css" />
       <style>
         [data-theme="light"],
         :root:not([data-theme="dark"]) {
@@ -49,11 +45,8 @@ const Layout = (props: {
           padding-right: 1rem !important;
         }
       </style>
-      <link
-        rel="icon"
-        type="image/x-icon"
-        href="https://raw.githubusercontent.com/flurium/grids/main/assets/favicon.ico"
-      />
+      <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
+      <script src="/public/htmx.min.js" defer></script>
     </head>
     <body class="container">
       ${props.children}
