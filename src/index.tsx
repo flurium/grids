@@ -15,6 +15,8 @@ app.get("/", (c) => {
   return c.html(<Landing />)
 })
 
+app.get("/favicon.ico", serveStatic({ path: "./favicon.ico" }))
+
 app.get(
   "/public/*",
   serveStatic({ root: "./", rewriteRequestPath: (path) => path.replace("/public/", "/") })

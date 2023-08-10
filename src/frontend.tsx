@@ -16,11 +16,7 @@ const Layout = (props: {
       <title>${props.title}</title>
       <meta name="description" content="${props.description}" />
       <meta name="author" content="Roman Koshchei" />
-      <link
-        rel="shortcut icon"
-        href="https://grids.fluriumteam.workers.dev/public/favicon.ico"
-      />
-      <link rel="icon" href="https://grids.fluriumteam.workers.dev/public/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="stylesheet" href="/public/pico.min.css" />
       <style>
         [data-theme="light"],
