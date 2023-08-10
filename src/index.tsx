@@ -11,7 +11,9 @@ type EnvVars = {
 }
 const app = new Hono<{ Bindings: EnvVars }>()
 
-app.get("/", (c) => c.html(<Landing />))
+app.get("/", (c) => {
+  return c.html(<Landing />)
+})
 
 app.get(
   "/public/*",
