@@ -13,10 +13,10 @@ const app = new Hono<{ Bindings: EnvVars }>()
 
 app.get("/", (c) => c.html(<Landing />))
 
-// static files, I have no clue why it doesn't work with just folder
-app.get("/public/favicon.ico", serveStatic({ path: "./favicon.ico" }))
-app.get("/public/htmx.min.js", serveStatic({ path: "./htmx.min.js" }))
-app.get("/public/pico.min.css", serveStatic({ path: "./pico.min.css" }))
+app.get(
+  "/public/*",
+  serveStatic({ root: "./", rewriteRequestPath: (path) => path.replace("/public/", "/") })
+)
 
 const waitlistSchema = v.object({
   name: v.optional(v.string("Name is missing.")),
