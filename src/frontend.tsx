@@ -16,7 +16,8 @@ const Layout = (props: {
       <title>${props.title}</title>
       <meta name="description" content="${props.description}" />
       <meta name="author" content="Roman Koshchei" />
-      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" href="/public/favicon.png" sizes="16x16" />
+      <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
       <link rel="stylesheet" href="/public/pico.min.css" />
       <style>
         [data-theme="light"],
