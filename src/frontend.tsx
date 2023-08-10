@@ -46,6 +46,10 @@ const Layout = (props: {
           padding-left: 1rem !important;
           padding-right: 1rem !important;
         }
+
+        .block {
+          display: block;
+        }
       </style>
       <script src="/public/htmx.min.js" defer></script>
     </head>
@@ -179,6 +183,73 @@ export const Landing = () => (
           <input type="email" name="email" placeholder="Email" />
           <button type="submit">Secure your spot</button>
         </form>
+      </section>
+      <section>
+        <hgroup style="margin:0;">
+          <h2>Pricing</h2>
+          <h3>Pricing plans are experimental and may change overtime.</h3>
+        </hgroup>
+        <div class="grid">
+          <article>
+            <header>
+              <hgroup style="margin:0;">
+                <h3>Hobby</h3>
+                <h4>Ideal to start with during development.</h4>
+              </hgroup>
+            </header>
+            <h5>Free</h5>
+            <ul>
+              <li>Up to 100 requests/day</li>
+              <li>Up to 2 services integration</li>
+              <li>Community support</li>
+            </ul>
+            <footer>
+              <a href="/#waitlist" role="button" class="secondary outline block">
+                Get started
+              </a>
+            </footer>
+          </article>
+          <article>
+            <header>
+              <hgroup style="margin:0;">
+                <h3>Pro</h3>
+                <h4>Exactly for You. Pay as you go without concerns.</h4>
+              </hgroup>
+            </header>
+
+            <h5>1$ per 5000 requests/mo</h5>
+
+            <ul>
+              <li>Unlimited requests/day</li>
+              <li>Unlimited services integration</li>
+              <li>Email support</li>
+            </ul>
+            <footer>
+              <a href="/#waitlist" role="button" class="primary block">
+                Get started
+              </a>
+            </footer>
+          </article>
+          <article>
+            <header>
+              <hgroup style="margin:0;">
+                <h3>Custom</h3>
+                <h4>For enterprise companies or potential partners.</h4>
+              </hgroup>
+            </header>
+            <h5>X</h5>
+            <ul>
+              <li>Unlimited requests/day</li>
+              <li>Unlimited services integration</li>
+              <li>Personal call/text support</li>
+            </ul>
+            <footer>
+              <a href="/#waitlist" role="button" class="outline block">
+                Contact us
+              </a>
+            </footer>
+          </article>
+        </div>
       </section>
     </main>
 
