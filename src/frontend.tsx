@@ -16,6 +16,7 @@ const Layout = (props: {
       <title>${props.title}</title>
       <meta name="description" content="${props.description}" />
       <meta name="author" content="Roman Koshchei" />
+      <link rel="shortcut icon" href="/public/favicon.ico" />
       <link rel="stylesheet" href="/public/pico.min.css" />
       <style>
         [data-theme="light"],
@@ -45,7 +46,6 @@ const Layout = (props: {
           padding-right: 1rem !important;
         }
       </style>
-      <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
       <script src="/public/htmx.min.js" defer></script>
     </head>
     <body class="container">
@@ -69,9 +69,7 @@ export const Message = (props: { success?: boolean; children: string }) => {
 export const Landing = () => (
   <Layout
     title="Grids: Make services never go down."
-    description="Developing off grid isn't real, so you must be on as MANY grids as possible.
-      Grids will provide a fast and cost-effective way to utilize numerous services
-      without becoming overly dependent on any one of them."
+    description="Developing off grid isn't real, so you must be on as MANY grids as possible. Grids will provide a fast and cost-effective way to utilize numerous services. without becoming overly dependent on any one of them."
   >
     {/* <nav>
       <ul>
