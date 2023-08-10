@@ -8,6 +8,7 @@ export async function call(info: {
     return await fetch(info.route, {
       method: info.method,
       headers: {
+        accept: "application/json",
         "content-type": "application/json",
         ...info.headers,
       },

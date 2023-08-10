@@ -14,16 +14,16 @@ Grids will manage limits and errors during sending emails.
 
 Services we are/will be supporting &check;:
 
-| Service    | Supported |
-| ---------- | --------- |
-| Resend     | &cross;   |
-| SendGrid   | &cross;   |
-| Postmark   | &cross;   |
-| Brevo      | &cross;   |
-| Mailjet    | &cross;   |
-| MailerSend | &cross;   |
-| Mailchimp  | &cross;   |
-| SendPulse  | &cross;   |
+| Service    | Supported | Stage   |
+| ---------- | --------- | ------- |
+| Resend     | &cross;   | Testing |
+| SendGrid   | &cross;   | Testing |
+| Postmark   | &cross;   | Testing |
+| Brevo      | &cross;   | Testing |
+| Mailjet    | &cross;   | Testing |
+| MailerSend | &cross;   | Planned |
+| Mailchimp  | &cross;   | Planned |
+| SendPulse  | &cross;   | Planned |
 
 # Storage
 

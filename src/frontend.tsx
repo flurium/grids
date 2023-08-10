@@ -187,7 +187,7 @@ export const Landing = () => (
       <section>
         <hgroup style="margin:0;">
           <h2>Pricing</h2>
-          <h3>Pricing plans are experimental and may change overtime.</h3>
+          <h3>Pricing plans are experimental and may change over time.</h3>
         </hgroup>
         <div class="grid">
           <article>
@@ -237,7 +237,7 @@ export const Landing = () => (
                 <h4>For enterprise companies or potential partners.</h4>
               </hgroup>
             </header>
-            <h5>X</h5>
+            <h5>Let's talk!</h5>
             <ul>
               <li>Unlimited requests/day</li>
               <li>Unlimited services integration</li>
