@@ -17,16 +17,25 @@ const Layout = (props: { children: Children }) => {
 
         <title>${title}</title>
         <meta name="description" content="${description}" />
-        <meta name="author" content="Roman Koshchei" />
 
-        <meta name="og:title" content="${title}" />
-        <meta name="og:description" content="${description}" />
-        <meta name="og:image" content="/public/og.png" />
+        <meta property="og:url" content="https://grids.fluriumteam.workers.dev/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="${title}" />
+        <meta property="og:description" content="${description}" />
+        <meta
+          property="og:image"
+          content="https://grids.fluriumteam.workers.dev/public/og.png"
+        />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="grids.fluriumteam.workers.dev" />
+        <meta property="twitter:url" content="https://grids.fluriumteam.workers.dev/" />
         <meta name="twitter:title" content="${title}" />
         <meta name="twitter:description" content="${description}" />
-        {/* NOTE twitter:image must be an absolute url */}
-        <meta name="twitter:image" content="/public/og.png" />
+        <meta
+          name="twitter:image"
+          content="https://grids.fluriumteam.workers.dev/public/og.png"
+        />
 
         <link rel="icon" type="image/png" href="/public/favicon.png" sizes="16x16" />
         <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
