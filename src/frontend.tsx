@@ -3,62 +3,74 @@ import type { HtmlEscapedString } from "hono/utils/html"
 
 type Children = HtmlEscapedString | HtmlEscapedString[]
 
-const Layout = (props: {
-  title: string
-  description: string
-  children: Children
-}) => html`
-  <!DOCTYPE html>
-  <html lang="en" style="scroll-behavior: smooth;">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>${props.title}</title>
-      <meta name="description" content="${props.description}" />
-      <meta name="author" content="Roman Koshchei" />
-      <link rel="icon" type="image/png" href="/public/favicon.png" sizes="16x16" />
-      <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
-      <link rel="stylesheet" href="/public/pico.min.css" />
-      <style>
-        [data-theme="light"],
-        :root:not([data-theme="dark"]) {
-          --primary: #3949ab;
-          --primary-hover: #303f9f;
-          --primary-focus: rgba(57, 73, 171, 0.125);
-          --primary-inverse: #fff;
-        }
+const Layout = (props: { children: Children }) => {
+  const title = "Grids: Make services never go down."
+  const description =
+    "Developing off grid isn't real, so you must be on as MANY grids as possible. Grids will provide a fast and cost-effective way to utilize numerous services. without becoming overly dependent on any one of them."
 
-        @media only screen and (prefers-color-scheme: dark) {
-          :root:not([data-theme]) {
+  return html`
+    <!DOCTYPE html>
+    <html lang="en" style="scroll-behavior: smooth;">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>${title}</title>
+        <meta name="description" content="${description}" />
+        <meta name="author" content="Roman Koshchei" />
+
+        <meta name="og:title" content="${title}" />
+        <meta name="og:description" content="${description}" />
+        <meta name="og:image" content="/public/og.png" />
+
+        <meta name="twitter:title" content="${title}" />
+        <meta name="twitter:description" content="${description}" />
+        {/* NOTE twitter:image must be an absolute url */}
+        <meta name="twitter:image" content="/public/og.png" />
+
+        <link rel="icon" type="image/png" href="/public/favicon.png" sizes="16x16" />
+        <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
+        <link rel="stylesheet" href="/public/pico.min.css" />
+        <style>
+          [data-theme="light"],
+          :root:not([data-theme="dark"]) {
             --primary: #3949ab;
-            --primary-hover: #3f51b5;
-            --primary-focus: rgba(57, 73, 171, 0.25);
+            --primary-hover: #303f9f;
+            --primary-focus: rgba(57, 73, 171, 0.125);
             --primary-inverse: #fff;
           }
-        }
 
-        .between {
-          display: flex;
-          justify-content: space-between;
-        }
+          @media only screen and (prefers-color-scheme: dark) {
+            :root:not([data-theme]) {
+              --primary: #3949ab;
+              --primary-hover: #3f51b5;
+              --primary-focus: rgba(57, 73, 171, 0.25);
+              --primary-inverse: #fff;
+            }
+          }
 
-        .px {
-          padding-left: 1rem !important;
-          padding-right: 1rem !important;
-        }
+          .between {
+            display: flex;
+            justify-content: space-between;
+          }
 
-        .block {
-          display: block;
-        }
-      </style>
-      <script src="/public/htmx.min.js" defer></script>
-    </head>
-    <body class="container">
-      ${props.children}
-    </body>
-  </html>
-`
+          .px {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+          }
 
+          .block {
+            display: block;
+          }
+        </style>
+        <script src="/public/htmx.min.js" defer></script>
+      </head>
+      <body class="container">
+        ${props.children}
+      </body>
+    </html>
+  `
+}
 export const Message = (props: { success?: boolean; children: string }) => {
   return (
     <p>
@@ -72,10 +84,7 @@ export const Message = (props: { success?: boolean; children: string }) => {
 }
 
 export const Landing = () => (
-  <Layout
-    title="Grids: Make services never go down."
-    description="Developing off grid isn't real, so you must be on as MANY grids as possible. Grids will provide a fast and cost-effective way to utilize numerous services. without becoming overly dependent on any one of them."
-  >
+  <Layout>
     {/* <nav>
       <ul>
         <li>
