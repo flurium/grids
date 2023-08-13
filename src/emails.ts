@@ -360,6 +360,7 @@ type MailchimpData =
 
 Can return status for each to email.
 Should continue to send emails for emails that was rejected.
+https://mailchimp.com/developer/transactional/api/messages/send-new-message/
 
 */
 export const mailchimp: SendEmail = async (input, secret) => {
