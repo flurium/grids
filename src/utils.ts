@@ -18,3 +18,11 @@ export async function call(info: {
     return null
   }
 }
+
+export async function json<T>(response: Response): Promise<T | null> {
+  try {
+    return (await response.json()) as T
+  } catch {
+    return null
+  }
+}
